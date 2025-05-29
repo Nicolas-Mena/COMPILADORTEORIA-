@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace CompiladorFinal
 {
     public class Error
+        //usa poo
     {
         public string Tipo { get; set; }
         public string Descripcion { get; set; }
