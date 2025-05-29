@@ -8,6 +8,7 @@ namespace CompiladorFinal
     public class AnalizadorSemantico
     {
         // Lista de errores semánticos encontrados
+        //usa poo
         private List<Error> errores;
 
         // Diccionario para registrar variables declaradas y sus tipos
@@ -16,6 +17,7 @@ namespace CompiladorFinal
         /// <summary>
         /// Constructor del analizador semántico
         /// </summary>
+        //usa poo
         public AnalizadorSemantico()
         {
             errores = new List<Error>();
@@ -27,6 +29,7 @@ namespace CompiladorFinal
         /// </summary>
         /// <param name="tokens">Lista de tokens a analizar</param>
         /// <returns>Lista de errores semánticos encontrados</returns>
+        //usa poo
         public List<Error> Analizar(List<Token> tokens)
         {
             // Limpiar estados previos
@@ -34,11 +37,13 @@ namespace CompiladorFinal
             variablesDeclaradas.Clear();
 
             // Recorrer todos los tokens
+            //usa poo
             for (int i = 0; i < tokens.Count; i++)
             {
                 // ==============================================
                 // DETECCIÓN DE DECLARACIONES DE VARIABLES
                 // ==============================================
+                //usa poo
                 if (EsTipoDeclaracion(tokens[i].Tipo) && i + 1 < tokens.Count && tokens[i + 1].Tipo == "IDENTIFICADOR")
                 {
                     string tipoVariable = tokens[i].Valor.ToLower();
@@ -69,6 +74,7 @@ namespace CompiladorFinal
                 // ==============================================
                 // DETECCIÓN DE ASIGNACIONES POSTERIORES
                 // ==============================================
+                //usa poo
                 else if (tokens[i].Tipo == "IDENTIFICADOR" && i + 1 < tokens.Count && tokens[i + 1].Tipo == "ASIGNACION" && i + 2 < tokens.Count)
                 {
                     string nombreVariable = tokens[i].Valor;
