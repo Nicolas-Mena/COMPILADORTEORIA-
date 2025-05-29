@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CompiladorFinal;
+//usa poo en su mayoria
 
 namespace CompiladorFinal
 {
@@ -28,7 +29,7 @@ namespace CompiladorFinal
             string codigo = txtCodigo.Text;
             List<Error> errores = new List<Error>();
 
-            // An·lisis lÈxico
+            // An√°lisis l√©xico
             List<Token> tokens = analizadorLexico.Analizar(codigo, errores);
 
             // Mostrar tokens
@@ -37,48 +38,48 @@ namespace CompiladorFinal
                 lstTokens.Items.Add(token.ToString());
             }
 
-            // Mostrar errores lÈxicos
+            // Mostrar errores l√©xicos
             if (errores.Count > 0)
             {
-                txtErrores.AppendText("=== ERRORES L…XICOS ===\r\n");
+                txtErrores.AppendText("=== ERRORES L√âXICOS ===\r\n");
                 foreach (Error error in errores)
                 {
-                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aquÌ
+                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aqu√≠
                 }
                 txtErrores.AppendText("\r\n");
             }
 
-            // An·lisis sint·ctico
+            // An√°lisis sint√°ctico
             List<Error> erroresSintacticos = analizadorSintactico.Analizar(tokens);
 
-            // Mostrar errores sint·cticos
+            // Mostrar errores sint√°cticos
             if (erroresSintacticos.Count > 0)
             {
-                txtErrores.AppendText("=== ERRORES SINT¡CTICOS ===\r\n");
+                txtErrores.AppendText("=== ERRORES SINT√ÅCTICOS ===\r\n");
                 foreach (Error error in erroresSintacticos)
                 {
-                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aquÌ
+                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aqu√≠
                 }
                 txtErrores.AppendText("\r\n");
             }
 
-            // An·lisis sem·ntico
+            // An√°lisis sem√°ntico
             List<Error> erroresSemanticos = analizadorSemantico.Analizar(tokens);
 
-            // Mostrar errores sem·nticos
+            // Mostrar errores sem√°nticos
             if (erroresSemanticos.Count > 0)
             {
-                txtErrores.AppendText("=== ERRORES SEM¡NTICOS ===\r\n");
+                txtErrores.AppendText("=== ERRORES SEM√ÅNTICOS ===\r\n");
                 foreach (Error error in erroresSemanticos)
                 {
-                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aquÌ
+                    txtErrores.AppendText(error.ToString() + "\r\n"); // Reemplazo aqu√≠
                 }
                 txtErrores.AppendText("\r\n");
             }
 
             if (errores.Count == 0 && erroresSintacticos.Count == 0 && erroresSemanticos.Count == 0)
             {
-                txtErrores.AppendText("COMPILACI”N EXITOSA - SIN ERRORES\r\n");
+                txtErrores.AppendText("COMPILACI√ìN EXITOSA - SIN ERRORES\r\n");
             }
         }
 
@@ -86,7 +87,7 @@ namespace CompiladorFinal
         {
             txtCodigo.Clear();
             lstTokens.Items.Clear();
-            txtErrores.Clear(); // Cambio aquÌ
+            txtErrores.Clear(); // Cambio aqu√≠
         }
     }
 }
