@@ -8,6 +8,7 @@ namespace CompiladorFinal
 {
     
         public class Token
+            //usa poo
         {
             public string Tipo { get; set; }
             public string Valor { get; set; }
