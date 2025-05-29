@@ -31,6 +31,9 @@ Este es un **compilador implementado en C# con Windows Forms**, desarrollado com
 - **Ámbitos** gestionados por pila de diccionarios.
 - **Interfaz gráfica** con Windows Forms para cargar y analizar código.
 ---
+##Diagrama
+![Imagen de WhatsApp 2025-05-28 a las 23 35 43_6346bfbf](https://github.com/user-attachments/assets/acc52590-8494-465c-a557-02b0ae78cf61)
+
 
 ## 🧪 Ejemplo de Código Compatible
 
