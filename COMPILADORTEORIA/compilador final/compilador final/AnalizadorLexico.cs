@@ -9,6 +9,7 @@ namespace CompiladorFinal
     public class AnalizadorLexico
     {
         // Diccionario de palabras reservadas del lenguaje con sus tokens correspondientes
+        //usa poo
         private readonly Dictionary<string, string> PalabrasReservadas = new Dictionary<string, string>
         {
             {"class", "CLASS"}, {"if", "IF"}, {"else", "ELSE"}, {"for", "FOR"}, {"while", "WHILE"},
@@ -17,6 +18,7 @@ namespace CompiladorFinal
         };
 
         // Diccionario de operadores con sus tokens correspondientes
+        //usa poo
         private readonly Dictionary<string, string> Operadores = new Dictionary<string, string>
         {
             {"+", "SUMA"}, {"-", "RESTA"}, {"*", "MULTIPLICACION"}, {"/", "DIVISION"}, {"=", "ASIGNACION"},
@@ -25,6 +27,7 @@ namespace CompiladorFinal
         };
 
         // Diccionario de delimitadores con sus tokens correspondientes
+        //usa poo
         private readonly Dictionary<string, string> Delimitadores = new Dictionary<string, string>
         {
             {"(", "PARENTESIS_IZQ"}, {")", "PARENTESIS_DER"}, {"{", "LLAVE_IZQ"}, {"}", "LLAVE_DER"},
@@ -34,7 +37,7 @@ namespace CompiladorFinal
     
         /// Método principal que analiza el código fuente y genera una lista de tokens
        
-
+    //usa poo
         public List<Token> Analizar(string codigo, List<Error> errores)
         {
             List<Token> tokens = new List<Token>();
