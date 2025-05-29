@@ -6,6 +6,7 @@ namespace CompiladorFinal
     static class Program
     {
         [STAThread]
+        //usa poo
         static void Main()
         {
             Application.EnableVisualStyles();
